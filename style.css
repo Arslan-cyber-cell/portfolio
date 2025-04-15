@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e0e0e;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1581093588401-b6a2a3bbf38d') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 10, 0.6);
+    z-index: 1;
+  }
+  
+  .hero .content {
+    z-index: 2;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1.2s ease-out;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  .section {
+    padding: 6rem 10%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #00ffc3;
+    padding-left: 1rem;
+    color: #00ffc3;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 255, 195, 0.2);
+  }
+  
+  .card h3 {
+    color: #00ffc3;
+    margin-bottom: 1rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #0a0a0a;
+    border-top: 1px solid #222;
+    color: #999;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .video-card {
+    display: flex;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 195, 0.1);
+    margin-top: 2rem;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 255, 195, 0.3);
+  }
+  
+  .thumbnail img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .video-info {
+    padding: 1.5rem;
+  }
+  
+  .video-info h3 {
+    margin-bottom: 0.5rem;
+    color: #00ffc3;
+  }
+  
+  /* Responsive Design */
+  
+  /* Pour les écrans de taille moyenne (tablettes) */
+  @media (max-width: 768px) {
+    .hero {
+      height: 50vh;
+      background-position: center;
+    }
+  
+    .hero h1 {
+      font-size: 3rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .section {
+      padding: 4rem 5%;
+    }
+  
+    .section h2 {
+      font-size: 2rem;
+    }
+  
+    .card {
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+  
+    .video-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+  
+    footer {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Pour les petits écrans (téléphones) */
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .section {
+      padding: 3rem 3%;
+    }
+  
+    .section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .card {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  
+    .video-card {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .thumbnail img {
+      width: 100%;
+      height: auto;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
